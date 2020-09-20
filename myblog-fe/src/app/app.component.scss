@@ -1,9 +1,168 @@
-.home-page {
-  text-align: center;
-
-  &__icon {
-    color: white;
-    position: absolute;
-    margin: 100px 150px 100px 0;
+.page {
+    font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.62;
+    color: #59666B;
+    &__title {
+      text-align: center;
+      font-size: 35px;
+    }
+    &__hero-section {
+        font-size: 32px;
+        &__title {
+          font-weight: 600;
+          font-size: 46px;
+          line-height: 1.2;
+          font-weight: 700;
+          margin-bottom: 20px;
+          text-align: center;
+          & span {
+            color: #11E374;
+          }
+        }
+        &__description {
+          margin: 5% 0;
+        }
+        &__banner {
+          cursor: pointer;
+          border-radius: 5px;
+          background-color: #FFF;
+          box-shadow: -5px 10px 57px 0 #E3E8FA;
+          width: 500px;
+          height: 300px;
+          &__header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            background: #3c3c3c;
+            border-radius: 5px 5px 0 0;
+            width: 100%;
+            height: 55px;
+            margin-left: 0;
+            &--red {
+              align-self:center;
+              height: 15px;
+              width: 15px;
+              border-radius: 100%;
+              background: red;
+            }
+            &--orange {
+              height: 15px;
+              width: 15px;
+              align-self:center;
+              border-radius: 100%;
+              background: orange;
+            }
+            &--green {
+              height: 15px;
+              width: 15px;
+              align-self:center;
+              border-radius: 100%;
+              background: green;
+            }
+            &--search {
+              height: 25px;
+              width: 70%;
+              align-self:center;
+              border-radius: 5px;
+              background: white;
+            }
+            &--logo {
+              height: 25px;
+              width: 25px;
+              background: red;
+              align-self:center;          
+            }
+          }
+        }
+      }
+    &__works-section {
+      &__wrapper {
+        margin-top: 86px;
+      }
+      &__card {
+        border-radius: 11px;
+        background-color: #FFF;
+        box-shadow: -5px 10px 57px 0 #E3E8FA;
+        padding: 52px 20px 20px;
+        text-align: center;
+        position: relative;
+        height: 100%;
+        &__circle {
+          position: absolute;
+          top: 0;
+          left: 50%;
+          background-color: rgba(0, 255, 170, 0.1);
+          width: 100px;
+          height: 100px;
+          border-radius: 100%;
+          display: inline-block;
+          overflow: hidden;
+          transform: translate(-50%,-50%);
+          &__inside {
+            width: 90px;
+            height: 90px;
+            background-image: linear-gradient(to bottom right, #00e49e,#98f0d6);
+            border-radius: 100%;
+            position: absolute;
+            display: table;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, 5%);
+            &__icon {
+            display: table-cell;
+            vertical-align: middle;
+            color:white;
+              &--fontawesome {
+                font-size: 35px;
+              }
+            }
+          }
+        }
+        &__title {
+          font-size: 24px;
+          font-weight: 700;
+          margin: 5% 0;
+        }
+        &__description {
+          &__code {
+            font-size: 12px;
+            white-space: pre-wrap;
+            margin-bottom: 2.5rem;
+            border-left: .3rem solid #9b4dca;
+            overflow-y: hidden;
+            background: #f4f5f6;
+            left: 0;
+          }
+        }
+      }
+    }
   }
-}
+  
+  .button {
+    font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
+    display: inline-block;
+    cursor: pointer;
+    background-color: #18ed8a;
+    color: #fff;
+    font-size: 18px;
+    padding: 20px 40px;
+    line-height: 18px;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 50px;
+    & a {
+      text-decoration: none;
+      color: white;
+    }
+    &:hover {
+    background-color: #11B83F;
+    }
+  }
+  .layout-center{
+      text-align: center;
+  }
+  
