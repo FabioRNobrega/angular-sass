@@ -16,7 +16,6 @@ Table of contents
 
   * [Install](#install)
   * [Usage](#usage)
-  * [Running tests](#running-tests)
   * [Architecture overview](#architecture-overview)
 
 ## Install 
@@ -37,14 +36,6 @@ The application will become available at the URL:
 
 ```
 http://localhost:4200/
-```
-
-## Running tests
-
-Tests are run using [Jest](https://jestjs.io/docs/en/getting-started.html) framework and lives in the /tests folder.
-
-``` bash 
-$ npm run test
 ```
 
 ## Architecture overview
