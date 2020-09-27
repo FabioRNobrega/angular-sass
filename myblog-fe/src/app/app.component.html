@@ -1,13 +1,32 @@
 <div class="page">
-  <div class="page__hero-section py-3">
+  <div class="page__navbar">
     <div class="container">
-      <div class="row py-4">
-        <div class="col-6">
+      <div class="row my-2">
+        <div class="col-md-2 col-sm-4">
+          <img src="https://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg" alt="">
+        </div>
+        <div class="col-md-10 col-sm-8">
+          <h1>
+            Sass do 0 ao I
+          </h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page__hero-section">
+    <div class="container">
+      <div class="row py-5">
+        <div class="col-md-6 col-sm-12">
           <div class="page__hero-section__title">
             O que é SASS?
           </div>
+          <div class="page__hero-section__description">
+            <a href="https://sass-lang.com"> Sass</a> é uma linguagem de script que é interpretada ou compilada em Cascading Style Sheets (CSS).
+            SassScript é a linguagem em si. Sass consiste em duas sintaxes.
+             A sintaxe original, chamada de "sintaxe indentada", usa uma sintaxe semelhante a <a href="https://haml.info"> Haml</a>. Ela usa indentação para separar blocos de código e caracteres de nova linha para separar regras. A sintaxe mais recente, "SCSS", usa formatação de bloco, como a de CSS. Esta usa chaves para designar blocos de código e ponto-e-vírgula para separar linhas dentro de um bloco. Os arquivos com sintaxe de indentação e SCSS são tradicionalmente dados as extensões .sass e .scss, respectivamente.
+          </div>
         </div>
-        <div class="col-6">
+        <div class="col-md-6 col-sm-12">
           <div class="page__hero-section__banner">
             <div class="page__hero-section__banner__header row">
               <div class="page__hero-section__banner__header--red"> </div>
@@ -15,12 +34,13 @@
               <div class="page__hero-section__banner__header--green"> </div>
               <div class="page__hero-section__banner__header--search"> </div>
             </div>
+            <iframe src="https://www.youtube.com/embed/WJSJCduJCQM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="page__works-section py-4 ">
+  <div class="page__works-section my-4 ">
     <div class="container">
       <div class="row">
         <div class="col-12">
@@ -35,20 +55,70 @@
             <div class="page__works-section__card__circle">
               <div class="page__works-section__card__circle__inside">
                 <div class="page__works-section__card__circle__inside__icon">
-                    <i class="fas fa-search page__works-section__card__circle__inside__icon--fontawesome"></i>
+                  <fa-icon [icon]="faList" class="page__works-section__card__circle__inside__icon--fontawesome"></fa-icon>
                 </div>
               </div>
             </div>
             <p class="page__works-section__card__title">
-              O Padrão BEM
+              O Padrão <a href="http://getbem.com/introduction/"> BEM </a>
             </p>
             <p class="page__works-section__card__description">
-            Como fica o Html 
+              O padrão BEM é uma convenção de escrita para class CSS que segue o príncipio
+              Blocks, Elements and Modifiers. O bloco sendo o componente principal,
+              o elemento a parte interna a esse bloco e por fim o modificador é o subconteudo 
+              desse elemento como no exemplo a baixo. 
+            Como fica o Html:
             </p>
             <pre class="page__works-section__card__description__code">
-              &lt;div class="block block--mod"&gt;...&lt;/div&gt;
-              &lt;div class="block block--size-big
-                block--shadow-yes"&gt;...&lt;/div&gt;
+
+  &#60;--- page.hrml --- &#62;
+
+    &lt;div class="bloco"&gt;
+      &lt;p class="bloco__elemento"&gt;  
+      Meu conteudo com um  
+      &lt;a href="#" class="bloco__elemento--modificador"&gt; link &lt;a&gt;.
+     &lt;/p&gt;
+    &lt;/div&gt;
+            </pre>
+
+            <div class="bloco">
+              <p class="bloco__elemento" >
+                Meu conteudo com um <a href="" class="bloco__elemento--modificador">link</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 page__works-section__wrapper">
+          <div class="page__works-section__card">
+            <div class="page__works-section__card__circle">
+              <div class="page__works-section__card__circle__inside">
+                <div class="page__works-section__card__circle__inside__icon">
+                    <fa-icon [icon]="faCode" class="page__works-section__card__circle__inside__icon--fontawesome"></fa-icon>
+                </div>
+              </div>
+            </div>
+            <p class="page__works-section__card__title">
+              O código em SCSS
+            </p>
+            <p class="page__works-section__card__description">
+              Sequindo o padrão BEM com a sintaxe do sass temos os seguinte resultado. 
+            </p>
+            <pre class="page__works-section__card__description__code"> 
+  &#60;--- page.scss --- &#62;    
+
+  &#64;import "src&#47;styles&#46;scss"&#59;    
+  &#46;bloco &#123;
+    background-color&#58; &#36;color-secundary&#59;
+    border-left&#58; &#46;3rem solid &#36;color-primary&#59;
+    &#38;__elemento &#123;
+      font-size&#58; 16px&#59;
+      color&#58; purple&#59;
+      font-weight&#58; 600&#59;
+      &#38;--modificador &#123;
+        color&#58; pink&#59;
+      &#125;
+    &#125;
+  &#125;
             </pre>
           </div>
         </div>
@@ -57,40 +127,58 @@
             <div class="page__works-section__card__circle">
               <div class="page__works-section__card__circle__inside">
                 <div class="page__works-section__card__circle__inside__icon">
-                    <i class="fas fa-shopping-cart page__works-section__card__circle__inside__icon--fontawesome"></i>
+                    <fa-icon [icon]="faEllipsisH" class="page__works-section__card__circle__inside__icon--fontawesome"></fa-icon>
                 </div>
               </div>
             </div>
             <p class="page__works-section__card__title">
-              Compre normalmente
+              <a href="https://sass-lang.com/documentation/variables">Variáveis</a> Sass
             </p>
             <p class="page__works-section__card__description">
-              Faça sua compra após acessar a loja através da Lemoney.
+              As variáveis Sass são bem simples de usar: você atribui um valor a um nome que começa com $ e, 
+              em seguida, pode se referir a esse nome em vez do próprio valor. Mas, apesar de sua simplicidade,
+               eles são uma das ferramentas mais úteis que Sass traz para a mesa. As variáveis tornam possível 
+               reduzir a repetição, fazer matemática complexa, configurar bibliotecas e muito mais.
+               Neste caso estamos armasenando nossas variáveis em um arquivo global e importando o mesmo quando
+               precisamos de alguma variável.
             </p>
-          </div>
-        </div>
-        <div class="col-md-4 page__works-section__wrapper">
-          <div class="page__works-section__card">
-            <div class="page__works-section__card__circle">
-              <div class="page__works-section__card__circle__inside">
-                <div class="page__works-section__card__circle__inside__icon">
-                <i class="fas fa-hand-holding-usd page__works-section__card__circle__inside__icon--fontawesome"></i>
-                </div>
-              </div>
-            </div>
-            <p class="page__works-section__card__title">
-              Pegue seu cashback
-            </p>
-            <p class="page__works-section__card__description">
-              Após a confirmação da compra, o seu dinheiro de volta estará disponível assim que a loja liberar o resgate para você ter o cashback de verdade na sua conta.
-            </p>
+            <pre class="page__works-section__card__description__code"> 
+  &#60;--- style.scss --- &#62;   
+
+      &#36;color-primary&#58; &#35;e400be&#59;
+      &#36;color-secundary&#58; &#35;f4f5f6&#59;
+
+            </pre>
           </div>
         </div>
       </div>
-      <div class="row page__works-section__wrapper justify-content-center">
-        <div class="col-12 layout-center">
-          <div class="button">
-            <a href="#"> Quero cashback de verdade </a>
+    </div>
+  </div>
+  <div class="page__whyUseSass-section">
+    <div class="container">
+      <div class="row py-5">
+        <div class="col-12">
+          <div class="page__whyUseSass-section__content">
+            <h2 class="page__title  mb-5">
+              Porque usar o SASS?
+            </h2>
+              Com o SASS é possível deixar o trabalho de criação de folhas de estilo mais dinâmico, 
+              profissional e rápido. Com a ajuda de um compilador deixamos nosso arquivo css 
+              sempre compactado melhorando o desempenho do site por carregar folhas de estilo 
+              mais leves e de quebra ainda deixa nossa área de trabalho mais organizada por 
+              permitir dividir o arquivo em várias partes distintas, realmente para um ambiente 
+              de produção o SASS faz muita diferença.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page__footer-section">
+    <div class="container">
+      <div class="row py-5">
+        <div class="col-12">
+          <div class="page__footer-section__content">
+            Page Developer by <a href="https://github.com/FabioRNobrega/angular-sass" class="page__footer-section__content--link">Fábio R. Nóbrega</a>
           </div>
         </div>
       </div>
